@@ -1,4 +1,4 @@
-package com.sivaraj.securebubble_pro
+package com.balamurugan.securebubble
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -59,7 +59,7 @@ class PopupManager(private val context: Context) {
         container.background = cardBg
 
         val title = TextView(context).apply {
-            text = "🛡 NUKEZERO SHIELD SECURITY MENU"
+            text = "🛡 PHISHGUARD AI SECURITY MENU"
             setTextColor(Color.WHITE)
             textSize = 14f
             paint.isFakeBoldText = true
@@ -171,7 +171,7 @@ class PopupManager(private val context: Context) {
         container.background = cardBg
 
         val titleView = TextView(context).apply {
-            text = "🛡 NUKEZERO SHIELD SCANNER"
+            text = "🛡 PHISHGUARD AI SCANNER"
             setTextColor(Color.WHITE)
             textSize = 16f
             paint.isFakeBoldText = true
@@ -312,7 +312,7 @@ class PopupManager(private val context: Context) {
         }
 
         val statusText = TextView(context).apply {
-            text = "🛡 NUKEZERO Shield • Capturing Screen..."
+            text = "🛡 PHISHGUARD AI • Capturing Screen..."
             setTextColor(Color.WHITE)
             textSize = 13.5f
             paint.isFakeBoldText = true
@@ -400,7 +400,7 @@ class PopupManager(private val context: Context) {
 
         // Header Title
         val titleView = TextView(context).apply {
-            text = "🛡 NUKEZERO SHIELD"
+            text = "🛡 PHISHGUARD AI"
             setTextColor(Color.WHITE)
             textSize = 17f
             paint.isFakeBoldText = true

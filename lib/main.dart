@@ -7,21 +7,25 @@ import 'screens/splash_screen.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  try {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  } catch (e) {
+    debugPrint("Firebase initialization warning: $e");
+  }
 
-  runApp(const NukezeroShieldApp());
+  runApp(const PhishGuardAiApp());
 }
 
-class NukezeroShieldApp extends StatelessWidget {
-  const NukezeroShieldApp({super.key});
+class PhishGuardAiApp extends StatelessWidget {
+  const PhishGuardAiApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "NUKEZERO Shield",
+      title: "PHISHGUARD AI",
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: const Color(0xFF000000),
         primaryColor: const Color(0xFFEF4444),

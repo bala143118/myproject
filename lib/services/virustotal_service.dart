@@ -1,8 +1,9 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import '../constants/api_keys.dart';
 
 class VirusTotalService {
-  static const String _defaultApiKey = "d87a41aa6e2b6a95f5764d2d416b9b32c69bc364177d54407b8b8ae8e48a1d7f";
+  static const String _defaultApiKey = ApiKeys.virusTotalApiKey;
 
   static Future<Map<String, dynamic>> checkUrlReputation(String targetUrl, {String? apiKey}) async {
     final key = apiKey ?? _defaultApiKey;

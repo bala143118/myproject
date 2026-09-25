@@ -1,4 +1,4 @@
-package com.sivaraj.securebubble_pro
+package com.balamurugan.securebubble
 
 import android.util.Base64
 import org.json.JSONObject
@@ -21,7 +21,7 @@ data class RealScanReport(
 
 class RealThreatScanner {
 
-    private val virusTotalApiKey = "f6d8955146607e4c73df66750ae2e4d0d08e5a6ef675661b1ee880cfb8c340d8"
+    private val virusTotalApiKey = "ec5743c42e74c9a7109b854e536855dceeb58472e799b8862b599983049d685c"
     private val linkDetector = LinkDetector()
 
     fun performRealScan(rawText: String, urls: List<String>): RealScanReport {

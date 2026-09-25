@@ -1,11 +1,13 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import '../constants/api_keys.dart';
 import 'threat_intel_provider.dart';
 
 class VirusTotalAdapter implements ThreatIntelProvider {
   final String apiKey;
 
-  VirusTotalAdapter({this.apiKey = ''});
+  VirusTotalAdapter({String? apiKey})
+      : apiKey = (apiKey != null && apiKey.isNotEmpty) ? apiKey : ApiKeys.virusTotalApiKey;
 
   @override
   String get providerName => 'VirusTotal API v3';

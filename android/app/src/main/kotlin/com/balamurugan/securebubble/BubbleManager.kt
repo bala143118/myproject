@@ -1,4 +1,4 @@
-package com.sivaraj.securebubble_pro
+package com.balamurugan.securebubble
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -40,6 +40,26 @@ class BubbleManager(private val context: Context) {
 
         popupManager = PopupManager(context)
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(context)) {
+            Toast.makeText(
+                context,
+                "Please enable 'Display over other apps' to use PHISHGUARD AI",
+                Toast.LENGTH_LONG
+            ).show()
+            try {
+                val intent = Intent(
+                    Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                    android.net.Uri.parse("package:${context.packageName}")
+                ).apply {
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                }
+                context.startActivity(intent)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+            return
+        }
+
         if (bubbleView != null) return
 
         bubbleView = LayoutInflater.from(context)
@@ -72,7 +92,7 @@ class BubbleManager(private val context: Context) {
 
         Toast.makeText(
             context,
-            "NUKEZERO Shield Active • Tap Bubble to Scan Screen",
+            "PHISHGUARD AI Active • Tap Bubble to Scan Screen",
             Toast.LENGTH_LONG
         ).show()
 
@@ -219,7 +239,7 @@ class BubbleManager(private val context: Context) {
         if (accService == null) {
             Toast.makeText(
                 context,
-                "Please enable NUKEZERO Shield under Accessibility -> Installed Apps",
+                "Please enable PHISHGUARD AI under Accessibility -> Installed Apps",
                 Toast.LENGTH_LONG
             ).show()
             try {

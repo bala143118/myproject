@@ -65,7 +65,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
-              content: Text("NUKEZERO Shield Active • Draggable Floating Assistant Enabled"),
+              content: Text("PHISHGUARD AI Active • Draggable Floating Assistant Enabled"),
               backgroundColor: Color(0xFFEF4444),
             ),
           );
@@ -269,7 +269,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           ),
                           const SizedBox(height: 16),
                           Text(
-                            "NUKEZERO SHIELD",
+                            "PHISHGUARD AI",
                             style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w900,
@@ -349,11 +349,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
                     const SizedBox(height: 20),
 
-                    // NUKEZERO Shield Tools Launchers Grid
+                    // PHISHGUARD AI Tools Launchers Grid
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text("NUKEZERO Security Tools", style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white)),
+                        const Text("PHISHGUARD Security Tools", style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white)),
                         Text("7 Active Modules", style: TextStyle(fontSize: 12, color: const Color(0xFFEF4444), fontWeight: FontWeight.bold)),
                       ],
                     ),

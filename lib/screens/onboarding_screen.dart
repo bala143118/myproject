@@ -16,7 +16,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   final List<Map<String, String>> _pages = [
     {
       'title': 'Autonomous Security Bubble',
-      'desc': 'NUKEZERO Shield runs as a draggable floating bubble overlay over WhatsApp, Chrome, SMS, and supported apps for instant "Scan Before You Click" protection.',
+      'desc': 'PHISHGUARD AI runs as a draggable floating bubble overlay over WhatsApp, Chrome, SMS, and supported apps for instant "Scan Before You Click" protection.',
       'icon': 'shield_rounded',
     },
     {

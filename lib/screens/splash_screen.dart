@@ -71,7 +71,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
             ),
             const SizedBox(height: 24),
             const Text(
-              "NUKEZERO SHIELD",
+              "PHISHGUARD AI",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 24,

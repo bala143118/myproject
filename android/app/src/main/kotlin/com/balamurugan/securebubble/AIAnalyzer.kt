@@ -1,4 +1,4 @@
-package com.sivaraj.securebubble_pro
+package com.balamurugan.securebubble
 
 data class ThreatResult(
     val threatLevel: String, // "SAFE", "MEDIUM RISK", "HIGH RISK", "DANGEROUS"

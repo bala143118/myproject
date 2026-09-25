@@ -1,4 +1,4 @@
-package com.sivaraj.securebubble_pro
+package com.balamurugan.securebubble
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -10,7 +10,7 @@ class NotificationHelper(private val context: Context) {
 
     companion object {
         const val CHANNEL_ID = "nukezero_channel"
-        const val CHANNEL_NAME = "NUKEZERO Shield Service"
+        const val CHANNEL_NAME = "PHISHGUARD AI Service"
         const val NOTIFICATION_ID = 1001
     }
 
@@ -21,7 +21,7 @@ class NotificationHelper(private val context: Context) {
                 CHANNEL_NAME,
                 NotificationManager.IMPORTANCE_LOW
             ).apply {
-                description = "NUKEZERO Shield Floating Protection Service"
+                description = "PHISHGUARD AI Floating Protection Service"
             }
 
             val manager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
@@ -37,7 +37,7 @@ class NotificationHelper(private val context: Context) {
         }
 
         return builder
-            .setContentTitle("NUKEZERO Shield")
+            .setContentTitle("PHISHGUARD AI")
             .setContentText("Autonomous Floating Protection Active")
             .setSmallIcon(R.drawable.ic_nukezero_shield)
             .setOngoing(true)

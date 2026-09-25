@@ -8,7 +8,7 @@ import base64
 from typing import List, Optional
 
 app = FastAPI(
-    title="SecureBubble AI / NUKEZERO SHIELD — Threat Intelligence Platform",
+    title="SecureBubble AI / PHISHGUARD AI — Threat Intelligence Platform",
     description="Defensive Cybersecurity Platform & Threat Intelligence API",
     version="3.0.0"
 )
@@ -21,7 +21,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-VIRUSTOTAL_API_KEY = os.getenv("VIRUSTOTAL_API_KEY", "f6d8955146607e4c73df66750ae2e4d0d08e5a6ef675661b1ee880cfb8c340d8")
+VIRUSTOTAL_API_KEY = os.getenv("VIRUSTOTAL_API_KEY", "ec5743c42e74c9a7109b854e536855dceeb58472e799b8862b599983049d685c")
 
 # Request Models
 class UrlAnalysisRequest(BaseModel):
@@ -48,7 +48,7 @@ class AnalysisResponse(BaseModel):
 @app.get("/")
 def read_root():
     return {
-        "platform": "SecureBubble AI / NUKEZERO SHIELD",
+        "platform": "SecureBubble AI / PHISHGUARD AI",
         "status": "ONLINE",
         "philosophy": "SCAN BEFORE YOU CLICK",
         "architecture": "Detect -> Analyze -> Explain -> Score -> Warn -> Protect"

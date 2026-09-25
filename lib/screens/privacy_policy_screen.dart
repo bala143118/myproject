@@ -18,13 +18,13 @@ class PrivacyPolicyScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              "NUKEZERO SHIELD PRIVACY PRINCIPLES",
+              "PHISHGUARD AI PRIVACY PRINCIPLES",
               style: TextStyle(color: Color(0xFFEF4444), fontWeight: FontWeight.w900, fontSize: 15, letterSpacing: 0.8),
             ),
             const SizedBox(height: 16),
             _buildSection(
               "1. Explicit User-Triggered Scanning",
-              "NUKEZERO Shield operates on an on-demand basis. Screen analysis and text extraction are executed strictly when you explicitly tap or long-press the floating security bubble. The app does NOT continuously record or monitor your screen in the background.",
+              "PHISHGUARD AI operates on an on-demand basis. Screen analysis and text extraction are executed strictly when you explicitly tap or long-press the floating security bubble. The app does NOT continuously record or monitor your screen in the background.",
             ),
             _buildSection(
               "2. Zero Sensitive Credentials Collection",
@@ -52,7 +52,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
                   SizedBox(width: 12),
                   Expanded(
                     child: Text(
-                      "NUKEZERO Shield is committed to transparent, policy-compliant Android cybersecurity.",
+                      "PHISHGUARD AI is committed to transparent, policy-compliant Android cybersecurity.",
                       style: TextStyle(color: Colors.white, fontSize: 12.5, fontWeight: FontWeight.bold, height: 1.4),
                     ),
                   ),

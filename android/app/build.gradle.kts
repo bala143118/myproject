@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.sivaraj.securebubble_pro"
+    namespace = "com.balamurugan.securebubble"
     compileSdk = 35
     buildToolsVersion = "36.0.0"
     ndkVersion = flutter.ndkVersion
@@ -17,21 +17,40 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.sivaraj.securebubble_pro"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
+        applicationId = "com.balamurugan.securebubble"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 34
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("securebubble.jks")
+            storePassword = "securebubble123"
+            keyAlias = "securebubble"
+            keyPassword = "securebubble123"
+            enableV1Signing = true
+            enableV2Signing = true
+        }
+    }
+
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+        debug {
+            signingConfig = signingConfigs.getByName("debug")
+        }
+    }
+
+    packaging {
+        jniLibs {
+            useLegacyPackaging = true
         }
     }
 }
@@ -45,10 +64,9 @@ kotlin {
 flutter {
     source = "../.."
 }
-dependencies {
 
+dependencies {
     implementation("com.google.mlkit:text-recognition:16.0.1")
     implementation("com.google.mlkit:barcode-scanning:17.3.0")
     implementation("com.google.zxing:core:3.5.3")
-
 }

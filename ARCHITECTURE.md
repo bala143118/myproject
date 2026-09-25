@@ -1,8 +1,8 @@
-# SECUREBUBBLE AI / NUKEZERO SHIELD — Platform Architecture & Security Model
+# SECUREBUBBLE AI / PHISHGUARD AI — Platform Architecture & Security Model
 
 ## 1. Executive Summary
 
-**SecureBubble AI / NUKEZERO SHIELD** is a production-grade, privacy-first mobile cybersecurity platform designed around the core operational rule: **"SCAN BEFORE YOU CLICK"**. 
+**SecureBubble AI / PHISHGUARD AI** is a production-grade, privacy-first mobile cybersecurity platform designed around the core operational rule: **"SCAN BEFORE YOU CLICK"**. 
 
 The platform protects Android users against phishing URLs, malicious QR codes, disguised hyperlinks, scam messages, homograph IDN attacks, and brand impersonation attempts across third-party applications.
 

@@ -1,4 +1,4 @@
-package com.sivaraj.securebubble_pro
+package com.balamurugan.securebubble
 
 import android.graphics.Bitmap
 import com.google.mlkit.vision.barcode.BarcodeScannerOptions

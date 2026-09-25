@@ -43,3 +43,9 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+SecureBubble.apk
+SecureBubble.apk.idsig
+android/build/
+build/
+.dart_tool/
+local.properties
